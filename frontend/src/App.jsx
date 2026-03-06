@@ -1,16 +1,11 @@
-import { useEffect, useState } from 'react';
+import Navbar from "./NavBar";
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/hello')
-    
-      .then(res => res.json())
-      .then(data => setMessage(data.message));
-  }, []);
-
-  return <h1>{message}</h1>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
